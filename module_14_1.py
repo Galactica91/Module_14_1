@@ -14,10 +14,10 @@ balance INTEGER NOT NULL
 )
 ''')
 
-cursor.execute("CREATE INDEX IF NOT EXISTS idx_email ON Users(email)")
-cursor.execute("INSERT INTO Users(username, email, age, balance) VALUES(?, ?, ?, ?)", ("user", "ex@gmail.com", "20", "1000"))
-for i in range(1, 11):
-    cursor.execute("INSERT INTO Users(username, email, age, balance) VALUES(?, ?, ?, ?)", (f"user{i}", f"ex{i}@gmail.com", i*10, 1000))
+#cursor.execute("CREATE INDEX IF NOT EXISTS idx_email ON Users(email)")
+#cursor.execute("INSERT INTO Users(username, email, age, balance) VALUES(?, ?, ?, ?)", ("user", "ex@gmail.com", "20", "1000"))
+#for i in range(1, 11):
+#    cursor.execute("INSERT INTO Users(username, email, age, balance) VALUES(?, ?, ?, ?)", (f"user{i}", f"ex{i}@gmail.com", i*10, 1000))
 
 cursor.execute("SELECT * FROM Users")
 users = cursor.fetchall()
