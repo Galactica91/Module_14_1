@@ -23,7 +23,7 @@ users = cursor.fetchall()
 for user in users:
     print(user)
 
-cursor.execute("UPDATE Users SET balance = 1000 WHERE id % 2 = 500")
+cursor.execute("UPDATE Users SET balance = 500 WHERE id % 2 = 1000")
 cursor.execute("DELETE FROM Users WHERE id % 3 = 1")
 cursor.execute("SELECT username, email, age, balance FROM Users WHERE age != 60")
 rows = cursor.fetchall()
